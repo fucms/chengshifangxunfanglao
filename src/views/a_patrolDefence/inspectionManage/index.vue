@@ -49,32 +49,32 @@
       >
         <el-table-column label="告警ID" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.alarmId }}</span>
           </template>
         </el-table-column>
         <el-table-column label="设备名称" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.deviceName }}</span>
           </template>
         </el-table-column>
         <el-table-column label="设备类型" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.deviceType }}</span>
           </template>
         </el-table-column>
         <el-table-column label="告警类型" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.alarmType }}</span>
           </template>
         </el-table-column>
         <el-table-column label="告警时间" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.alarmTime }}</span>
           </template>
         </el-table-column>
         <el-table-column label="处理人" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code6 }}</span>
+            <span>{{ row.handler }}</span>
           </template>
         </el-table-column>
 
@@ -161,12 +161,12 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
-        code6: form.customerCode6
+        alarmId: form.customerCode1,
+        deviceName: form.customerCode2,
+        deviceType: form.customerCode3,
+        alarmType: form.customerCode4,
+        alarmTime: form.customerCode5,
+        handler: form.customerCode6
       })
     },
     handleFilter() { },

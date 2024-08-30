@@ -49,27 +49,27 @@
       >
         <el-table-column label="时间" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.time }}</span>
           </template>
         </el-table-column>
         <el-table-column label="监测点" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.monitoringPoint }}</span>
           </template>
         </el-table-column>
         <el-table-column label="水位" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.waterLevel }}</span>
           </template>
         </el-table-column>
         <el-table-column label="流量" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.flow }}</span>
           </template>
         </el-table-column>
         <el-table-column label="降水量" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.precipitation }}</span>
           </template>
         </el-table-column>
         <el-table-column label="风险评估" prop="type3" align="center">
@@ -79,7 +79,7 @@
         </el-table-column>
         <el-table-column label="水质" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code6 }}</span>
+            <span>{{ row.waterQuality }}</span>
           </template>
         </el-table-column>
 
@@ -166,12 +166,12 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
-        code6: form.customerCode6,
+        time: form.customerCode1,
+        monitoringPoint: form.customerCode2,
+        waterLevel: form.customerCode3,
+        flow: form.customerCode4,
+        precipitation: form.customerCode5,
+        waterQuality: form.customerCode6,
         type1: form.value
       })
     },

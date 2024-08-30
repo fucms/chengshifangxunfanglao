@@ -54,32 +54,32 @@
         </el-table-column>
         <el-table-column label="积水地址" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.address }}</span>
           </template>
         </el-table-column>
         <el-table-column label="积水描述" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.description }}</span>
           </template>
         </el-table-column>
         <el-table-column label="上传时间" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.uploadTime }}</span>
           </template>
         </el-table-column>
         <el-table-column label="上报人" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.reporter }}</span>
           </template>
         </el-table-column>
         <el-table-column label="联系方式" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code6 }}</span>
+            <span>{{ row.contact }}</span>
           </template>
         </el-table-column>
         <el-table-column label="上传图片" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code7 }}</span>
+            <img :src="row.image">
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" min-width="120">
@@ -168,12 +168,12 @@ export default {
     create(form) {
       this.list.push({
         index: this.list.length + 1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
-        code6: form.customerCode6,
-        code7: form.customerCode7
+        address: form.customerCode2,
+        description: form.customerCode3,
+        uploadTime: form.customerCode4,
+        reporter: form.customerCode5,
+        contact: form.customerCode6,
+        image: form.customerCode7
       })
     },
     handleFilter() { },

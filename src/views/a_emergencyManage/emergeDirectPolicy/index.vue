@@ -47,27 +47,27 @@
       >
         <el-table-column label="值守任务编号" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.taskId }}</span>
           </template>
         </el-table-column>
         <el-table-column label="办理时间" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.handlingTime }}</span>
           </template>
         </el-table-column>
         <el-table-column label="办理流程" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.process }}</span>
           </template>
         </el-table-column>
         <el-table-column label="办理意见" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.opinion }}</span>
           </template>
         </el-table-column>
         <el-table-column label="所属部门" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.department }}</span>
           </template>
         </el-table-column>
         <el-table-column label="执行状态" prop="type3" align="center">
@@ -158,11 +158,11 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
+        taskId: form.customerCode1,
+        handlingTime: form.customerCode2,
+        process: form.customerCode3,
+        opinion: form.customerCode4,
+        department: form.customerCode5,
         type1: form.value
       })
     },

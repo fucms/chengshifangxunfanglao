@@ -51,17 +51,17 @@
         </el-table-column>
         <el-table-column label="会议名称" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.meetingName }}</span>
           </template>
         </el-table-column>
         <el-table-column label="会议时间" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.meetingTime }}</span>
           </template>
         </el-table-column>
         <el-table-column label="会议主题" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.meetingTopic }}</span>
           </template>
         </el-table-column>
 
@@ -147,9 +147,9 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
+        meetingName: form.customerCode1,
+        meetingTime: form.customerCode2,
+        meetingTopic: form.customerCode3,
         index: this.list.length + 1
       })
     },

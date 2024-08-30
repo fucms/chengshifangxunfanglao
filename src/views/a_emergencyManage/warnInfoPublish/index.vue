@@ -52,27 +52,27 @@
         </el-table-column>
         <el-table-column label="排水设施资产" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.drainageAsset }}</span>
           </template>
         </el-table-column>
         <el-table-column label="排水设施运维" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.drainageMaintenance }}</span>
           </template>
         </el-table-column>
         <el-table-column label="污水排放监管费" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.sewageRegulationFee }}</span>
           </template>
         </el-table-column>
         <el-table-column label="日常业务" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.dailyBusiness }}</span>
           </template>
         </el-table-column>
         <el-table-column label="使用对象" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code6 }}</span>
+            <span>{{ row.usageObject }}</span>
           </template>
         </el-table-column>
 
@@ -160,11 +160,11 @@ export default {
     create(form) {
       this.list.push({
         index: this.list.length + 1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
-        code6: form.customerCode6
+        drainageAsset: form.customerCode2,
+        drainageMaintenance: form.customerCode3,
+        sewageRegulationFee: form.customerCode4,
+        dailyBusiness: form.customerCode5,
+        usageObject: form.customerCode6
       })
     },
     handleFilter() { },

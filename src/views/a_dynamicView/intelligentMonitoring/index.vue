@@ -49,37 +49,37 @@
       >
         <el-table-column label="水质监测" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.waterQualityMonitoring }}</span>
           </template>
         </el-table-column>
         <el-table-column label="排水口" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.drainageOutlet }}</span>
           </template>
         </el-table-column>
         <el-table-column label="雨水管井" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.rainwaterPipeWell }}</span>
           </template>
         </el-table-column>
         <el-table-column label="易涝点" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.floodProneArea }}</span>
           </template>
         </el-table-column>
         <el-table-column label="水库" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.reservoir }}</span>
           </template>
         </el-table-column>
         <el-table-column label="河流" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code6 }}</span>
+            <span>{{ row.river }}</span>
           </template>
         </el-table-column>
         <el-table-column label="地表水水质" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code7 }}</span>
+            <span>{{ row.surfaceWaterQuality }}</span>
           </template>
         </el-table-column>
 
@@ -165,13 +165,13 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5,
-        code6: form.customerCode6,
-        code7: form.customerCode7
+        waterQualityMonitoring: form.customerCode1,
+        drainageOutlet: form.customerCode2,
+        rainwaterPipeWell: form.customerCode3,
+        floodProneArea: form.customerCode4,
+        reservoir: form.customerCode5,
+        river: form.customerCode6,
+        surfaceWaterQuality: form.customerCode7
       })
     },
     handleFilter() { },

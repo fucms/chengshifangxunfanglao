@@ -47,22 +47,22 @@
       >
         <el-table-column label="序号" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.id }}</span>
           </template>
         </el-table-column>
         <el-table-column label="防汛调度" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.floodControlDispatch }}</span>
           </template>
         </el-table-column>
         <el-table-column label="应急处置" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.emergencyResponse }}</span>
           </template>
         </el-table-column>
         <el-table-column label="汛情预报" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.floodForecast }}</span>
           </template>
         </el-table-column>
 
@@ -149,10 +149,10 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4
+        id: form.customerCode1,
+        floodControlDispatch: form.customerCode2,
+        emergencyResponse: form.customerCode3,
+        floodForecast: form.customerCode4
       })
     },
     handleFilter() { },

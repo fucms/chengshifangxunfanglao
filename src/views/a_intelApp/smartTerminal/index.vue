@@ -46,27 +46,27 @@
       >
         <el-table-column label="综合气象资讯" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code1 }}</span>
+            <span>{{ row.weatherInfo }}</span>
           </template>
         </el-table-column>
         <el-table-column label="降雨信息" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code2 }}</span>
+            <span>{{ row.rainfallInfo }}</span>
           </template>
         </el-table-column>
         <el-table-column label="内涝数据" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code3 }}</span>
+            <span>{{ row.floodData }}</span>
           </template>
         </el-table-column>
         <el-table-column label="告警信息" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code4 }}</span>
+            <span>{{ row.alertInfo }}</span>
           </template>
         </el-table-column>
         <el-table-column label="业务流事件" prop="type3" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.code5 }}</span>
+            <span>{{ row.businessEvent }}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" min-width="120">
@@ -151,11 +151,11 @@ export default {
     },
     create(form) {
       this.list.push({
-        code1: form.customerCode1,
-        code2: form.customerCode2,
-        code3: form.customerCode3,
-        code4: form.customerCode4,
-        code5: form.customerCode5
+        weatherInfo: form.customerCode1,
+        rainfallInfo: form.customerCode2,
+        floodData: form.customerCode3,
+        alertInfo: form.customerCode4,
+        businessEvent: form.customerCode5
       })
     },
     handleFilter() { },
